@@ -17,7 +17,6 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
-	../android/statvfs.c \
 	buffer.c \
 	cuse_lowlevel.c \
 	fuse.c \
@@ -45,7 +44,7 @@ LOCAL_CFLAGS := \
 	-DFUSE_USE_VERSION=26 \
     -fno-strict-aliasing
 
-LOCAL_MODULE := libfuse
+LOCAL_MODULE := libfuse_static
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_STATIC_LIBRARY)
